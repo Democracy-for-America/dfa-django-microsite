@@ -212,8 +212,8 @@ if os.environ.get('DJANGO_ENVIRONMENT') == 'production':
     AWS_SECRET_ACCESS_KEY   = os.environ['AWS_SECRET_ACCESS_KEY']
 
     # Amazon S3 URL
-    AWS_BUCKET_NAME = os.environ['AWS_BUCKET_NAME']
-    S3_URL = 'http://%s.s3.amazonaws.com/' % AWS_BUCKET_NAME
+    AWS_STORAGE_BUCKET_NAME = os.environ['AWS_BUCKET_NAME']
+    S3_URL = 'http://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
 
     # Default File storage
     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
