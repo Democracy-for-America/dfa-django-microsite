@@ -9,6 +9,7 @@ django-cms==3.0.2
 django-mptt==0.6.1
 django-reversion==1.8.0
 django-sekizai==0.7
+django-storages==1.1.8
 django-toolbelt==0.0.1
 djangocms-admin-style==0.2.2
 djangocms-column==1.3
