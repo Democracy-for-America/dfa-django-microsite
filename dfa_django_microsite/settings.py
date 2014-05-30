@@ -218,5 +218,3 @@ if os.environ.get('DJANGO_ENVIRONMENT') == 'production':
     # Default File storage
     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
     MEDIA_URL = S3_URL
-
-    AWS_S3_SECURE_URLS = False
