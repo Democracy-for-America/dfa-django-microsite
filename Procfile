@@ -1,0 +1,1 @@
+web: gunicorn dfa_django_microsite.wsgi
