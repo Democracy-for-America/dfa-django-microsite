@@ -215,10 +215,6 @@ if os.environ.get('DJANGO_ENVIRONMENT') == 'production':
     AWS_BUCKET_NAME = os.environ['AWS_BUCKET_NAME']
     S3_URL = 'http://%s.s3.amazonaws.com/' % AWS_BUCKET_NAME
 
-    # Static files location
-    STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-    STATIC_URL = S3_URL
-
     # Default File storage
     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
     MEDIA_URL = S3_URL
