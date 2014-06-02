@@ -1,0 +1,6 @@
+{% load cms_tags staticfiles sekizai_tags menu_tags %}
+
+<meta name="og_title" content='{% filter striptags %}{% spaceless %}{% placeholder "og_title" %}{% endspaceless %}{% endfilter %}'>
+<meta name="og_description" content='{% filter striptags %}{% spaceless %}{% placeholder "og_description" %}{% endspaceless %}{% endfilter %}'>
+<meta name="og_image" content='{% filter striptags %}{% spaceless %}{% placeholder "og_image" %}{% endspaceless %}{% endfilter %}'>
+<meta name="twitter_content" content='{% filter striptags %}{% spaceless %}{% placeholder "twitter_content" %}{% endspaceless %}{% endfilter %}'>
