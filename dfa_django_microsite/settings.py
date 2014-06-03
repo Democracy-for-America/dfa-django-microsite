@@ -221,3 +221,5 @@ if os.environ.get('DJANGO_ENVIRONMENT') == 'production':
     MEDIA_URL = S3_URL
 
     SECRET_KEY = os.environ['SECRET_KEY']
+
+    AWS_S3_SECURE_URLS = False
