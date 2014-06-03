@@ -6,12 +6,13 @@
     <script>startTime=new Date()</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% render_block "css" %}
+
+    <link rel="canonical" href="{{ request.get_host }}{{ request.path }}">
+
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Custom CSS for the 'Full Width Pics' Template -->
     <link href="/static/dfa.css" rel="stylesheet">
-
-
 
     <!-- AK Validations -->
     <link href="http://act.democracyforamerica.com/resources/actionkit.css" rel="stylesheet" type="text/css">
@@ -35,8 +36,8 @@
 
     <!-- STICKY MENU ITEMS -->
     <div class="navbar-header pull-right">
-          <a class="btn-social" href="#"><i class="fa fa-fw fa-facebook"></i></a>
-          <a class="btn-social" href="#"><i class="fa fa-fw fa-twitter"></i></a>
+          <a class="btn-social" href="http://facebook.com/sharer/sharer.php?u={{ request.get_host }}{{ request.path }}" target="_blank"><i class="fa fa-fw fa-facebook"></i></a>
+          <a class="btn-social" href="http://www.twitter.com/share?url={{ request.get_host }}{{ request.path }}" target="_blank"><i class="fa fa-fw fa-twitter"></i></a>
           &nbsp;
     </div>
 
@@ -82,11 +83,7 @@
           <ul class="compact" id="ak-errors">
           </ul>
 
-          <div id="known_user">Not ? <a href="http://act.democracyforamerica.com?">Click here.</a>
-
-          <hr /></div>
-
-          <div class="user-form ak-labels-overlaid ak-errs-below" id="unknown_user">
+          <div class="user-form ak-labels-overlaid ak-errs-below">
           <div class="required" id="id_name_box"><label for="id_name">Name<span class="ak-required-flag">*</span></label> <input id="id_name" name="name" type="text" /></div>
 
           <div class="required" id="id_email_box"><label for="id_email">E-mail address<span class="ak-required-flag">*</span></label> <input id="id_email" name="email" type="text" /></div>
@@ -96,8 +93,8 @@
 
           <br>
 
-          <div class="center-wrapper"><button class="btn btn-danger btn-large" type="submit">Stop all the downloading!</button></div>
-          <input name="page" type="hidden" value="mkk_test_petition" /></div>
+          <div class="center-wrapper"><button class="btn btn-danger btn-large" type="submit"><big>Stop all the downloading!</big></button></div>
+          <input name="page" type="hidden" value="training_house_elves" /></div>
           </form>
           <!-- / ActionKit Petition Form -->
         </div>
@@ -114,14 +111,12 @@
       <a name="learn"></a>
       <div class="row">
         <div class="col-lg-12 section">
-          <h1>Learn more</h1>
-          <p><big>The two different full width images are defined in the CSS. They aren't the same! One has a defined height, and one does not! Go crazy and get creative!</big></p>
-          <p><big>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sollicitudin auctor quam ac tempor. Cras a ante sed libero mollis sodales. Praesent fringilla, neque ut ultrices faucibus, dolor eros ultrices neque, nec bibendum arcu ipsum eget justo. Phasellus vestibulum sagittis purus laoreet varius. Pellentesque malesuada malesuada mattis. Aliquam sed porta nisi, eget suscipit dolor. Nam ipsum sapien, rhoncus eu leo eu, ultricies pellentesque tellus.</big></p>
+          {% placeholder "about_text" %}
         </div>
       </div>
     </div>
 
-    <div class="full-width-image-2">
+    <div class="full-width-image-3">
       <!-- box content goes here if you want to put text or a button in here -->
     </div>
     <!-- /full-width-image-2 -->
@@ -130,7 +125,7 @@
       <a name="share"></a>
       <div class="row">
         <div class="col-lg-12 section half-margin">
-          <h1>You're almost done --<br><small>multiply your impact by sharing this page, or through a donation to Democracy for America!</small></h1>
+          {% placeholder "thanks_text" %}
         </div>
       </div>
       <div class="row">
@@ -141,12 +136,12 @@
         </div>
         <div class="col-sm-4 section">
           <p style="text-align: center;">
-            <a href="#" class="btn btn-success btn-lg" style="width: 230px; padding: 13px 0px;">Post to Facebook &#187;</a>
+            <a href="http://facebook.com/sharer/sharer.php?u={{ request.get_host }}{{ request.path }}" target="_blank" class="btn btn-success btn-lg" style="width: 230px; padding: 13px 0px;">Post to Facebook &#187;</a>
           </p>
         </div>
         <div class="col-sm-4 section">
           <p style="text-align: center;">
-            <a href="#" class="btn btn-primary btn-lg" style="width: 230px; padding: 13px 0px;">Share on Twitter &#187;</a>
+            <a href="http://www.twitter.com/share?url={{ request.get_host }}{{ request.path }}" target="_blank" class="btn btn-primary btn-lg" style="width: 230px; padding: 13px 0px;">Share on Twitter &#187;</a>
           </p>
         </div>
       </div>
