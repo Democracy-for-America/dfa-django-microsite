@@ -18,6 +18,8 @@
     <link href="http://act.democracyforamerica.com/resources/actionkit.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
     <script type="text/javascript" src="http://act.democracyforamerica.com/resources/actionkit.js"></script>
+
+    {% if not request.toolbar.edit_mode %}{% include "metadata.html" %}{% endif %}
   </head>
 
   <body>
@@ -176,6 +178,8 @@
     </footer>
   </div>
   </div>
+
+  {% if request.toolbar.edit_mode %}{% include "metadata_editor.html" %}{% endif %}
 
   <script src="http://code.jquery.com/jquery.js"></script>
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
